@@ -7,7 +7,7 @@
 
 (def page-num (reagent/atom 1))
 
-(def coordinate (reagent/atom {:x 20 :y 20}))
+(def coordinate (reagent/atom {:x 300 :y 300}))
 ;(def y-coordinate (reagent/atom {:value 20}))
 
 (defn common-head []
@@ -50,6 +50,10 @@
     (= (.-key e) "ArrowDown") (swap! coordinate update-in [:y] inc)
     (= (.-key e) "ArrowLeft") (swap! coordinate update-in [:x] dec)
     (= (.-key e) "ArrowRight") (swap! coordinate update-in [:x] inc)
+    (= (.-key e) "w") (swap! coordinate update-in [:y] dec)
+    (= (.-key e) "s") (swap! coordinate update-in [:y] inc)
+    (= (.-key e) "a") (swap! coordinate update-in [:x] dec)
+    (= (.-key e) "d") (swap! coordinate update-in [:x] inc)
     :else (println (.-key e))
     ))
 

@@ -7,7 +7,7 @@ goog.require('reitit.frontend');
 goog.require('clerk.core');
 goog.require('accountant.core');
 reagent_tutorial.core.page_num = reagent.core.atom.call(null,(1));
-reagent_tutorial.core.coordinate = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"x","x",2099068185),(20),new cljs.core.Keyword(null,"y","y",-1757859776),(20)], null));
+reagent_tutorial.core.coordinate = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"x","x",2099068185),(300),new cljs.core.Keyword(null,"y","y",-1757859776),(300)], null));
 reagent_tutorial.core.common_head = (function reagent_tutorial$core$common_head(){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h1","h1",-1896887462),"my-several homepage"], null);
 });
@@ -65,8 +65,24 @@ return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core
 if(cljs.core._EQ_.call(null,e.key,"ArrowRight")){
 return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"x","x",2099068185)], null),cljs.core.inc);
 } else {
+if(cljs.core._EQ_.call(null,e.key,"w")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"y","y",-1757859776)], null),cljs.core.dec);
+} else {
+if(cljs.core._EQ_.call(null,e.key,"s")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"y","y",-1757859776)], null),cljs.core.inc);
+} else {
+if(cljs.core._EQ_.call(null,e.key,"a")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"x","x",2099068185)], null),cljs.core.dec);
+} else {
+if(cljs.core._EQ_.call(null,e.key,"d")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"x","x",2099068185)], null),cljs.core.inc);
+} else {
 return cljs.core.println.call(null,e.key);
 
+}
+}
+}
+}
 }
 }
 }
@@ -91,4 +107,4 @@ clerk.core.initialize_BANG_.call(null);
 return reagent_tutorial.core.mount_root.call(null);
 });
 
-//# sourceMappingURL=core.js.map?rel=1552709046679
+//# sourceMappingURL=core.js.map?rel=1552716300570
