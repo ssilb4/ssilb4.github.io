@@ -58,8 +58,9 @@
     (= (.fromCharCode js/String (.-key e)) "s") (swap! coordinate update-in [:y] inc)
     (= (.fromCharCode js/String (.-key e)) "a") (swap! coordinate update-in [:x] dec)
     (= (.fromCharCode js/String (.-key e)) "d") (swap! coordinate update-in [:x] inc)
-    ;:else (.alert js/window (.-key e))
-    :else (println (.-key e))))
+    :else (.alert js/window (.fromCharCode js/String (.-key e)))
+    ;:else (println (.-key e))
+    ))
 
 ; (defn common-page [x y]
 ;   [:div
