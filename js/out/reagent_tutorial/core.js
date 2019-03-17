@@ -77,8 +77,24 @@ return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core
 if(cljs.core._EQ_.call(null,e.key,"d")){
 return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"x","x",2099068185)], null),cljs.core.inc);
 } else {
-return window.alert(e.key);
+if(cljs.core._EQ_.call(null,String.fromCharCode(e.key),"w")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"y","y",-1757859776)], null),cljs.core.dec);
+} else {
+if(cljs.core._EQ_.call(null,String.fromCharCode(e.key),"s")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"y","y",-1757859776)], null),cljs.core.inc);
+} else {
+if(cljs.core._EQ_.call(null,String.fromCharCode(e.key),"a")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"x","x",2099068185)], null),cljs.core.dec);
+} else {
+if(cljs.core._EQ_.call(null,String.fromCharCode(e.key),"d")){
+return cljs.core.swap_BANG_.call(null,reagent_tutorial.core.coordinate,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"x","x",2099068185)], null),cljs.core.inc);
+} else {
+return cljs.core.println.call(null,e.key);
 
+}
+}
+}
+}
 }
 }
 }
@@ -107,4 +123,4 @@ clerk.core.initialize_BANG_.call(null);
 return reagent_tutorial.core.mount_root.call(null);
 });
 
-//# sourceMappingURL=core.js.map?rel=1552811508472
+//# sourceMappingURL=core.js.map?rel=1552812596669

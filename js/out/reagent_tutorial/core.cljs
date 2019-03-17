@@ -45,7 +45,7 @@
     :style {:top (str (get @coordinate :y) "px") :left (str (get @coordinate :x) "px")}}])
 
 (defn moving [e]
-  (cond 
+  (cond
     (= (.-key e) "ArrowUp") (swap! coordinate update-in [:y] dec)
     (= (.-key e) "ArrowDown") (swap! coordinate update-in [:y] inc)
     (= (.-key e) "ArrowLeft") (swap! coordinate update-in [:x] dec)
@@ -54,9 +54,12 @@
     (= (.-key e) "s") (swap! coordinate update-in [:y] inc)
     (= (.-key e) "a") (swap! coordinate update-in [:x] dec)
     (= (.-key e) "d") (swap! coordinate update-in [:x] inc)
-    :else (.alert js/window (.-key e))
-    ;:else (println (.-key e))
-    ))
+    (= (.fromCharCode js/String (.-key e)) "w") (swap! coordinate update-in [:y] dec)
+    (= (.fromCharCode js/String (.-key e)) "s") (swap! coordinate update-in [:y] inc)
+    (= (.fromCharCode js/String (.-key e)) "a") (swap! coordinate update-in [:x] dec)
+    (= (.fromCharCode js/String (.-key e)) "d") (swap! coordinate update-in [:x] inc)
+    ;:else (.alert js/window (.-key e))
+    :else (println (.-key e))))
 
 ; (defn common-page [x y]
 ;   [:div
