@@ -54,7 +54,8 @@
     (= (.-key e) "s") (swap! coordinate update-in [:y] inc)
     (= (.-key e) "a") (swap! coordinate update-in [:x] dec)
     (= (.-key e) "d") (swap! coordinate update-in [:x] inc)
-    :else (println (.-key e))
+    :else (.alert js/window (.-key e))
+    ;:else (println (.-key e))
     ))
 
 ; (defn common-page [x y]
